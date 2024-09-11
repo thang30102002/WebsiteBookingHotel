@@ -1,0 +1,362 @@
+.collapse .btn-outline-success{
+    color: rgba(1,148,243,1.00) !important;
+    border-color: rgba(1,148,243,1.00) !important;
+}
+.btn-outline-success:hover {
+    color: #fff!important;
+    background-color: rgba(1,148,243,1.00)!important;
+    border-color: rgba(1,148,243,1.00)!important;
+}
+.right{
+	display: flex;
+    position: absolute;
+    right: 40px;
+	height: 100% ;
+	align-items: center;
+}
+.bg-light{
+    background-color: #fff!important;
+}
+.width-80{
+    width: 80%;
+    margin: auto;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(3,18,26,1.00)!important;
+}
+.nav-item-hover:hover{
+    background-color: rgb(242,243,243);
+    border-radius: 6px;
+}
+
+.background-header{
+    background-color: rgba(1,148,243,1.00);
+    width: 100%;
+    height: 300;
+    position: relative;
+}
+.background-header .content{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    color: #fff;
+}
+.background-header .content h1{
+    font-size: 50;
+}
+.background-header .content p{
+    font-size: 25;
+}
+.background-header .img{
+    position: absolute;
+    right: 10;
+    margin-top: 10;
+}
+.background-header .img img{
+    margin-left: 10;
+    height: 60%;
+    border-radius: 10px;
+}
+/* css thanh tìm kiếm */
+
+.search_hotel{    
+    position: relative;
+    background-color: #fff;
+    width: 50%;
+    margin: auto;
+    border: groove;
+    padding: 25;
+    margin-top: -41px;
+    border-radius: 11px;
+}
+.form-input{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.form-input i{
+    position: absolute;
+    padding-left: 10;
+    padding-right: 10;
+}
+.form-input input{
+    padding-left: 30px;
+}
+.search_hotel .input-date{
+    display: flex;
+}
+.margin-left{
+    margin-left: 15;
+}
+.chidel-input-date{
+    width: 33.33%;
+    display: grid;
+}
+.form-group{
+    padding: 10;
+}
+.form-input-quantity{
+    display: flex;
+}
+.form-input-quantity .input-quantity{
+    width: 25%;
+}
+.input-quantity button{
+    width: 100%;
+}
+.btn-search i{
+    margin-right: 10;
+}
+.input-quantity input{
+    border-radius: 7px;
+    border-color: rgba(205,208,209,1.00);
+}
+
+
+/* list-products */
+body {
+	
+	font-family: "Open Sans", sans-serif;
+}
+h2 {
+	color: #000;
+	font-size: 26px;
+	font-weight: 300;
+	text-align: center;
+	text-transform: uppercase;
+	position: relative;
+	margin: 30px 0 60px;
+}
+h2::after {
+	content: "";
+	width: 100px;
+	position: absolute;
+	margin: 0 auto;
+	height: 4px;
+	border-radius: 1px;
+	background: #337ab7;
+	left: 0;
+	right: 0;
+	bottom: -20px;
+}
+.carousel {
+	margin: 50px auto;
+	padding: 0 70px;
+}
+.carousel .item {
+	color: #747d89;
+	min-height: 325px;
+    text-align: center;
+	overflow: hidden;
+}
+.carousel .thumb-wrapper {
+	padding: 25px 15px;
+	background: #fff;
+	border-radius: 6px;
+	text-align: center;
+	position: relative;
+	box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+}
+.carousel .item .img-box {
+	height: 120px;
+	margin-bottom: 20px;
+	width: 100%;
+	position: relative;
+}
+.carousel .item img {	
+	max-width: 100%;
+	max-height: 100%;
+	display: inline-block;
+	position: absolute;
+	bottom: 0;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+}
+.carousel .item h4 {
+	font-size: 18px;
+}
+.carousel .item h4, .carousel .item p, .carousel .item ul {
+	margin-bottom: 5px;
+}
+.carousel .thumb-content .btn {
+	color: #337ab7;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: none;
+    border: 1px solid #337ab7;
+    padding: 6px 14px;
+    margin-top: 5px;
+    line-height: 16px;
+    border-radius: 20px;
+}
+.carousel .thumb-content .btn:hover, .carousel .thumb-content .btn:focus {
+	color: #fff;
+	background: #337ab7;
+	box-shadow: none;
+}
+.carousel .thumb-content .btn i {
+	font-size: 14px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+.carousel .carousel-control {
+	height: 44px;
+	width: 40px;
+	background: #337ab7;	
+    margin: auto 0;
+    border-radius: 4px;
+	opacity: 0.8;
+}
+.carousel .carousel-control:hover {
+	background: #337ab7;
+	opacity: 1;
+}
+.carousel .carousel-control i {
+    font-size: 36px;
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    margin: -19px 0 0 0;
+    z-index: 5;
+    left: 0;
+    right: 0;
+    color: #fff;
+	text-shadow: none;
+    font-weight: bold;
+}
+.carousel .item-price {
+	font-size: 13px;
+	padding: 2px 0;
+}
+.carousel .item-price strike {
+	opacity: 0.7;
+	margin-right: 5px;
+}
+.carousel .carousel-control.left i {
+	margin-left: -2px;
+}
+.carousel .carousel-control.right i {
+	margin-right: -4px;
+}
+.carousel .carousel-indicators {
+	bottom: -50px;
+}
+.carousel-indicators li, .carousel-indicators li.active {
+	width: 10px;
+	height: 10px;
+	margin: 4px;
+	border-radius: 50%;
+	border: none;
+}
+.carousel-indicators li {	
+	background: rgba(0, 0, 0, 0.2);
+}
+.carousel-indicators li.active {	
+	background: rgba(0, 0, 0, 0.6);
+}
+.carousel .wish-icon {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	z-index: 99;
+	cursor: pointer;
+	font-size: 16px;
+	color: #abb0b8;
+}
+.carousel .wish-icon .fa-heart {
+	color: #ff6161;
+}
+.star-rating li {
+	padding: 0;
+}
+.star-rating i {
+	font-size: 14px;
+	color: #ffc000;
+}
+.img-asia{
+	display: flex;
+	margin: auto;
+}
+.username{
+	margin: 0;
+    margin-right: 20px;
+    line-height: 38;
+}
+.btn-login{
+	margin-right: 10;
+}
+.logo-web{
+	color: rgb(1, 148, 243)!important;
+    font-weight: bolder;
+    font-family: cursive;
+    font-size: 25px;
+}
+.menu li{
+	display: flex;
+	align-items: center;
+	font-weight: bold;
+}
+.menu li:hover a{
+	color: rgb(1, 148, 243);
+}	
+.menu-header{
+	position: fixed!important;
+    top: 0;
+    z-index: 999;
+    right: 0;
+    left: 0;
+    width: 100%;
+    background-color: floralwhite;
+    opacity: 0.9;
+    margin: 0;
+}
+.background-header{
+	margin-top: 75px;
+}
+
+
+
+.form-group .list-search ul li{
+	list-style: none;
+    padding: 10 5px;
+    margin: 0;
+    border: solid;
+    border-width: 1;
+    border-color: rgb(205, 208, 209);
+    cursor:pointer!important;
+    font-weight: bold;
+}
+.form-group .list-search ul {
+	padding: 0;
+    max-height: 200px; /* Độ cao tối đa của danh sách trước khi xuất hiện thanh cuộn */
+    overflow: auto; /* Hiển thị thanh cuộn khi danh sách quá dài */
+}
+.list-search .title{
+	margin: 0;
+    border: solid;
+    border-width: 1;
+    border-color: rgb(205, 208, 209);
+    font-size: 14;
+    font-weight: 700;
+    padding: 4px;
+    background-color: rgba(247,249,250,1.00);
+}
+
+
+.highlight {
+	display: block; /* Hiển thị khi được highlight */
+	
+}
+.display-none{
+    display: none;
+}
+
+.form-group .list-search ul li:hover{
+    color: #fff;
+    background-color: rgb(1, 148, 243);
+}
+

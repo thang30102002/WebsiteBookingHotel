@@ -1,0 +1,208 @@
+body{
+    background-color: rgba(247, 249, 250, 1.00)!important;
+}
+.form-booking{
+    width: 60%;
+    margin: auto;
+    display: flex;
+    position: relative;
+    
+}
+.form-booking-information{
+    max-width: 60%;
+}
+.form-booking h5{
+    color: rgb(104, 113, 118);
+    font-size: 16px;
+    margin-top: 40px;
+}
+.form-booking h2{
+    padding: 20;
+}
+.form-booking .greeting-user{
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    
+    flex: none;
+    flex-direction: column;
+}
+.greeting-user .information-user{
+    width: 70px;
+    margin-right: 21px;
+    border-radius: 55px;
+    display: flex;
+    width: 100%;
+}
+.greeting-user .information-user{
+    font-weight: bold;
+}
+.greeting-user .service{
+    display: flex;
+    position: relative;
+}
+.greeting-user .information-user img{
+    width: 70px;
+    border-radius: 46px;
+    margin-right: 10;
+}
+.diz{
+    border: solid;
+    border-width: 1px;
+    padding: 3 10;
+    display: flex;
+    border-radius: 12px;
+    /* text-align: center; */
+    align-content: center;
+    /* text-align: revert; */
+    align-items: center;
+    /* justify-items: center; */
+    /* justify-content: center; */
+    border-color: rgba(205, 208, 209, 1.00);
+    width: 49%;
+}
+.service .accumulate-coins{
+    right: 0;
+    position: absolute;
+}
+.service img{
+    margin-right: 10;
+}
+.service h6{
+    margin: 0;
+}
+.service p{
+    margin: 0;
+    font-size: 13px;
+    color: rgba(104, 113, 118, 1.00);
+    font-weight: 600;
+}
+.form_contact{
+    background-color: #fff;
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: 600;
+    color: rgba(104, 113, 118, 1.00);
+}
+.form_contact h4{
+    color: #000;
+    font-weight: bold;
+}
+.form-request input{
+    width: 100%;
+}
+.form-price-booking .span-thue{
+    color: rgb(1, 148, 243);
+    font-size: 13px;
+    font-weight: bold;
+}
+.form-price-booking .price-room{
+    display: flex;
+    width: 100%;
+    font-size: 17px;
+    font-weight: 600;
+    color: #000;
+    margin-top: 10;
+    position: relative;
+}
+.form-price-booking .span-price{
+    position: absolute;
+    right: 0;
+}
+.tital-price h5{
+    font-size: 21px;
+    color: #000;
+    font-weight: 700;
+}
+.tital-price .number{
+    color: rgb(255, 94, 31);
+}
+.form_contact .btn-contact{
+    color: #fff;
+    border: 100%;
+    border: navajowhite;
+    background-color: rgb(255, 94, 31);
+    width: 100%;
+    border-radius: 8px;
+    padding: 10;
+    font-size: 18px;
+    font-weight: bold;
+}
+.title-form-contact{
+    width: 60%;
+    margin: auto;
+    margin-top: 76px;
+}
+.title-form-contact h5{
+    margin-top: 50;
+}
+.form-booking-room .div-background{
+    height: 30px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(137deg, rgb(26, 47, 120) 0%, rgb(24, 112, 201) 46.1%, rgb(81, 149, 227) 96.84%);
+}
+.form-booking-room{
+    margin: 0;
+    position: relative;
+    width: 38%;
+    /* right: 0px; */
+    min-height: 700px;
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+}
+.form-booking-room .name-hotel{
+    margin-top: 24px;
+    font-size: 17px;
+    color: #000;
+    font-weight: 700;
+}
+.form-booking-room .slide{
+    margin: 0;
+    padding: 0;
+}
+.form-booking-room .in-out-room{
+    display: flex;
+    position: relative;
+    margin-top: 10;
+}
+.in-out-room .div-all{
+    text-align: center;
+    border: solid;
+    border-width: 1;
+    border-radius: 10px;
+    padding: 8px;
+    font-size: 11px;
+    border-color: rgb(205, 208, 209);
+    font-weight: bold;
+    width: 40%;
+}
+.form-booking-room .check-out{
+    position: absolute;
+    right: 0;
+}
+.in-out-room .number-night{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    font-size: 13px;
+}
+.number-night span{
+    border-bottom: solid;
+    border-width: 1;
+}
+.div-number-user-kid{
+    margin-top: 6;
+}
+.div-number-user-kid i{
+    margin-right: 10;
+}
+
+

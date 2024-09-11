@@ -1,0 +1,172 @@
+body{
+    background-color: rgba(247,249,250,1.00);
+}
+.search-hotel{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    margin-top: 121px;
+    min-height: 800px;
+}
+.side-bar{
+    width: 20%;
+    margin-right: 15;
+    
+}
+.main-search{
+    width: 80%;
+    
+}
+.why-price-chip{
+    background-color: rgb(1, 83, 134);
+    color: #fff;
+    border-radius: 8px;
+    padding: 5px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.how-many-hotel{
+    margin-top: 10;
+}
+.list-hotel .hotel{
+    display: flex;
+    
+    width: 100%;
+    
+    border-radius: 6px;
+    position: relative;
+    margin-top: 15;
+    border: solid;
+    box-shadow: 0px 1px 2px rgba(3,18,26,0.20);
+    border-width: 0.3px;
+    border-color: #fff;
+}
+.hotel .img-hotel{
+    width: 33%;
+
+}
+.img-hotel img{
+    max-width: 100%;
+}
+.hotel .hotel-price{
+    position: absolute;
+    padding: 10;
+    right: 0;
+    text-align: center;
+}
+.hotel-price .default-price{
+    color: gray;
+    font-size: 14px;
+    text-decoration: line-through;
+}
+.hotel-price .discount-price{
+    font-size: 20;
+    color: rgb(255, 94, 31);
+    font-weight: 700;
+}
+.hotel-price p{
+    font-size: 14;
+    color: gray;
+}
+.hotel-price button{
+    background-color: rgb(255, 94, 31);
+    border: none;
+    padding: 8px;
+    border-radius: 7px;
+    color: #fff;
+    font-weight: 500;
+}
+.information-hotel .name-hotel{
+    font-size: 20px;
+    font-weight: bold;
+}
+.address-hotel i{
+    margin-right: 10;
+}
+.address-hotel{
+    color: gray;
+}
+
+.star-hotel{
+    color: rgb(2, 100, 200);
+}
+.hotel:hover{
+    cursor: pointer;
+    box-shadow: 1px 1px 6px rgba(1,148,243,0.5);
+}
+.how-many-hotel{
+    font-weight: bold;
+}
+.download-app{
+    width: 100%;
+    position: relative;
+}
+.download-app img{
+    width: 100%;
+}
+.download-app p{
+    position: absolute;
+    top: 12;
+    left: 10;
+    margin-bottom: 1rem;
+    color: #fff;
+    font-weight: 500;
+    font-size: 14;
+}
+
+.side-bar .filter-price{
+    background-color: #fff;
+    margin-top: 20;
+    padding: 10;
+    position: relative;
+    border-radius: 7px;
+}
+.filter-price .filter-title{
+    font-size: 17px;
+    font-weight: bold;
+    margin: 0;
+}
+.filter-price .filter-note{
+    font-size: 11px;
+    color: gray;
+}
+.filter-price .btn-click-filter-price{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    font-weight: 500;
+    background-color: rgb(1, 148, 243);
+    padding: 4px 13px;
+}
+.filter-star img{
+    width: 20px;
+}
+.filter-utilities label{
+    font-weight: 600;
+}
+.title-limit{
+    top: 70px;
+    position: fixed;
+    background-image: linear-gradient(160deg, #1A2F78 0%, #1870C9 50%, #5195E3 100%);
+    width: 100%;
+    z-index: 999999;
+    text-align: center;
+    color: #fff;
+    font-weight: bolder;
+    padding: 13px;
+    opacity: 0.95;
+}
+.title-limit span{
+    background-color: rgba(255, 255, 255, 0.15);
+    
+    padding: 8px;
+    border-radius: 7px;
+}
+.title-limit span i{
+    margin-right: 10;
+}
+
+

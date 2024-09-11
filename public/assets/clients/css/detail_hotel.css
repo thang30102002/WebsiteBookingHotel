@@ -1,0 +1,375 @@
+body{
+    background-color: rgba(247,249,250,1.00)!important;
+}
+.detail-hotel{
+    width: 60%;
+    margin: auto;
+    margin-top: 76px;
+}
+.detail-hotel .part-1{
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+.left-part-1 .type-hotel{
+    background-color: rgba(236, 248, 255, 1.00);
+    padding: 5px;
+    color: rgba(2, 100, 200, 1.00);
+    border-radius: 14px;
+    font-weight: 700;
+}
+.left-part-1 .address-hotel{
+    margin-top: 10;
+    color: gray;
+}
+.left-part-1 .name-hotel{
+    font-size: 26px;
+    font-weight: 700;
+}
+.part-1 .right-part-1{
+    position: absolute;
+    right: 0;
+    text-align: right;
+}
+.right-part-1 .title-price{
+    font-size: 13px;
+    font-weight: bolder;
+}
+.right-part-1 .price{
+    color: rgb(255, 94, 31);
+    font-size: 25;
+    font-weight: bold;
+}
+.right-part-1 button{
+    width: 100%;
+    background-color: rgb(255, 94, 31);
+    border: none;
+    padding: 5 34px;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.list-img-hotel{
+    width: 100%;
+    display: flex;
+    height: 370px;
+}
+.list-img-hotel .img-main{
+    width: 60%;
+    position: relative;
+    
+}
+.img-main img{
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+.list-img{
+    width: 40%;
+}
+.list-img img{
+    width: 100%;
+}
+.list-img .container{
+    height: 100%;
+}
+.container .row{
+    height: 100%;
+}
+.row .col{
+    height: 33.33%;
+}
+.col img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding-top: 5;
+    padding-bottom: 5;
+}
+.list-img-hotel img{
+    border-radius: 10px;
+}
+.part-2 .number-room-min{
+    background-image: linear-gradient(135deg, rgb(189, 233, 255) 0%, rgb(214, 241, 255) 50%, rgb(214, 241, 255) 100%);
+    /* padding: 1px; */
+    border-radius: 31px;
+    margin: 10 0;
+}
+.number-room-min img{
+    padding: 10;
+    background-image: linear-gradient(137deg, rgb(26, 47, 120) 0%, rgb(24, 112, 201) 47.61%, rgb(81, 149, 227) 100%);
+    border-radius: 25px;
+}
+.number-room-min span{
+    font-size: 16px;
+    font-weight: bold;
+}
+.color-blu{
+    color: rgba(2, 100, 200, 1.00);
+}
+.information-main .information-address{
+    display: flex;
+    position: relative;
+}
+.information-address .information{
+    position: relative;
+    width: 40%;
+    background-color: #fff;
+    padding: 10;
+    border-radius: 10px;
+}
+.information-address .address{
+    width: 58%;
+    background-color: #fff;
+    position: absolute;
+    right: 0;
+    height: 100%;
+    padding: 10;
+    border-radius: 10px;
+    
+    background-image: url(https://ik.imagekit.io/tvlk/image/imageResource/2022/12/22/1671697257708-40dfdb8bfb9aafb6d141a4327a8d605e.svg?tr=q-75);
+}
+.information-main h3{
+    font-size: 18px;
+    font-weight: bold;
+}
+.information-main p{
+    font-size: 14px;
+}
+.address .row i{
+    margin-right: 5;
+}
+.address .row .col{
+    position: relative;
+    font-weight: 500;
+}
+.address .col .number-km{
+    position: absolute;
+    right: 0;
+}
+.information button{
+    position: absolute;
+    right: 10;
+    background-color: #fff;
+    border: none;
+    color: rgba(1, 148, 243, 1.00);
+    font-weight: bolder;
+}
+.utilities{
+    height: 180px;
+    margin-top: 10px;
+}
+.btn-show-all-recomment{
+    position: absolute;
+    right: 10;
+    background-color: #fff;
+    border: none;
+    color: rgba(1, 148, 243, 1.00);
+    font-weight: bolder;
+}
+.recomment-user{
+    position: absolute;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10;
+    right: 0;
+    width: 58%;
+    height: 100%;
+    overflow-y: auto;
+}
+.recomment-user .number-user-comment{
+    margin: 0;
+    color: rgba(2, 100, 200, 1.00);
+    font-weight: bold;
+}
+.recomment-user p,.name-user{
+    font-weight: bold;
+}
+.recomment-user .col{
+    border: solid;
+    border-width: 1px;
+    border-color: rgba(242, 243, 243, 1.00);
+    border-radius: 12px;
+    padding: 0;
+    margin: 5;
+}
+.list-rooms{
+    margin-top: 15px;
+}
+.list-rooms .title{
+    background-color: rgb(37, 92, 159);
+    padding: 10;
+    border-radius: 12px;
+    color: #fff;
+    font-weight: bold;
+}
+.title img{
+    width: 39px;
+    margin-right: 10;
+}
+.list-rooms .room{
+    padding: 20;
+    background-repeat: no-repeat; /* Không lặp lại hình nền */
+    background-image: url(https://ik.imagekit.io/tvlk/image/imageResource/2023/12/22/1703230740804-7c3d1c3e64557331e6f5f66d7a28e262.svg?tr=h-420,q-75,w-467);
+}
+.room i{
+    margin-right: 5px;
+    color: rgb(37, 92, 159);
+}
+.img-room-main{
+    border-radius: 14px;
+}
+.room .left{
+    font-weight: 500;
+    width: 40%;
+}
+.room .right-price-room{
+    position: absolute;
+    width: 58%;
+    right: 0;
+}
+.room .unitity-room{
+    margin: 10 0;
+}
+.information-room{
+    display: flex;
+    position: relative;
+}
+.right-price-room table{
+    width: 100%;
+    text-align: center;
+}
+.right-price-room tbody .tr-heder{
+    background-image: linear-gradient(135deg, rgb(189, 233, 255) 0%, rgb(214, 241, 255) 50%, rgb(214, 241, 255) 100%);
+}
+.right-price-room tr th{
+    padding: 12;
+    border: solid;
+    border-width: 0.2px;
+    border-color: rgba(242, 243, 243, 1.00);
+    
+}
+.right-price-room tr td{
+    background-color: #fff;
+    border: solid;
+    border-width: 0.2px;
+    border-color: rgba(242, 243, 243, 1.00);
+}
+.right-price-room .price-room{
+    text-decoration: line-through;
+    color: gray;
+}
+.right-price-room .price-room-discound{
+    color: rgb(255, 94, 31);
+    font-size: 20;
+    font-weight: bold;
+}
+.right-price-room .thue{
+    color: gray;
+}
+.right-price-room .btn-select-room{
+    background-color: rgb(255, 94, 31);
+    border: none;
+    width: 50%;
+    padding: 10;
+    border-radius: 14px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 10;
+}
+.right-price-room .number-room-empty{
+    color: rgb(255, 94, 31);
+    font-weight: bold;
+}
+.right-price-room .information-room-content{
+    background-color: #fff;
+    padding: 20;
+    
+}
+.evaluate-user .list-evaluate{
+    background-color: #fff;
+    max-height: 700px;
+    overflow-y: auto;
+}
+.evaluate-user .evaluate{
+    display: flex;
+    padding: 20px;
+    border: solid;
+    border-color: #CFCFCF;
+    border-width: 2px;
+    border-radius: 8px;
+    margin-top: 10;
+}
+.evaluate .user-name{
+    width: 30%;
+}
+.evaluate .user-name img{
+    border-radius: 48px;
+    margin-right: 10;
+}
+.evaluate .user-name .name{
+    font-size: 18px;
+    font-weight: bold;
+}
+.evaluate .evaluate-content{
+    width: 70%;
+    font-weight: 500;
+    position: relative;
+}
+.evaluate-content .date{
+    position: absolute;
+    right: 0;
+    color: gray;
+}
+.evaluate-content p{
+    margin-top: 15;
+}
+
+
+
+.form-input-evaluate input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .form-input-evaluate  input[type=submit] {
+    width: 100%;
+    background-color: rgb(255, 94, 31);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .form-input-evaluate  input[type=submit]:hover {
+    background-color: rgb(255, 94, 31);
+  }
+  
+  .form-input-evaluate  div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+
+  .form-input-evaluate{
+    background-color: #fff;
+    padding: 20;
+    border-radius: 10px;
+  }
+  .utilities .container i{
+    font-size: 20px;
+    margin-right: 10;
+  }
+  .utilities .container{
+    font-weight: bold;
+  }

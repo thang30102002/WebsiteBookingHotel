@@ -1,0 +1,58 @@
+.location{
+    background-image: url("https://ik.imagekit.io/tvlk/image/imageResource/2017/11/27/1511757912999-0cf20b204b9dd67194f67e14bb962bde.jpeg?tr=q-75");
+    width: 90%;
+    position: relative;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 17px;
+    height: 200;
+}
+.location .membrane{
+    position: absolute;
+    border-radius: 17px;
+    width: 100%;
+    background: rgba(80, 80, 80, 0.5);
+    transition: all 300ms ease 0s;
+    height: 100%;
+}
+.hotel-location{
+    position: absolute;
+    padding: 17;
+    color: #fff;
+}
+.hotel-location h3{
+    font-weight: bold;
+    font-size: 21px;
+}
+.hotel-location{
+    width: 100%;
+    height: 100%;
+}
+.btn-show-hotel{
+    border: solid;
+    padding: 0 20;
+    text-align: center;
+    border-width: 1px;
+    margin-top: 75px;
+    display: none;
+}
+.location:hover .btn-show-hotel{
+    display: block;
+    transition: all 300ms ease 0s;
+    margin-top: 45px;
+    
+}
+.location:hover .membrane{
+    background-color: rgba(43, 43, 43, 0.8);
+}
+.location:hover{
+    cursor: pointer;
+}
+.hot-location{
+    width: 60%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tạo 3 cột có chiều rộng bằng nhau */
+    grid-gap: 10px; /* Khoảng cách giữa các phần tử */
+  
+}

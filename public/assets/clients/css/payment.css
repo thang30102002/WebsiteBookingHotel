@@ -1,0 +1,44 @@
+
+.div-payment-bank .bank-name{
+    background-color: rgb(209, 240, 255);
+    position: relative;
+padding: 15;
+font-weight: bold;
+border-radius: 10px;
+}
+.bank-name img{
+    position: absolute;
+    right: 10;
+}
+.form-payment{
+    width: 60%;
+    background-color: #fff;
+    border-radius: 10px;
+    min-height: 700;
+    padding: 10;
+}
+.div-payment-bank .information-payment{
+    display: flex;
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+    padding: 10;
+}
+.information-payment .info-payment-right{
+    position: absolute;
+    right: 0;
+}
+.form-payment .btn-payment{
+    width: 100%;
+    border: none;
+    font-weight: bold;
+    color: rgb(1, 148, 243);
+    margin-top: 50;
+}
+.h4-form-payment{
+    margin-top: 10;
+}
+.form-payment button{
+    background-color: #fff;
+    padding: 20;
+}

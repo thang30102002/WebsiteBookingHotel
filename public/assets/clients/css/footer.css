@@ -1,0 +1,84 @@
+.footer{
+    background-color: rgba(28,41,48,1.00);
+    padding: 0;
+    margin-top: 20;
+}
+.no-padding{
+    padding: 0!important;
+}
+.no-margin{
+    margin: 0;
+}
+.up-footer{
+    width: 80%;
+    margin: auto;
+}
+.up-footer img{
+    padding: 10;
+}
+.up-footer .img-pay-partner{
+    background-color: rgba(255,255,255,1.00);
+    border-radius: 8px;
+    margin: 3;
+}
+.pay-partner p{
+    color: #fff;
+    font-weight: bold;
+}
+.btn-cooperate{
+    padding: 15 0;
+}
+.btn-cooperate button{
+    width: 60%;
+    border-radius: 8px;
+    padding: 10;
+    color: #fff;
+    background-color: rgba(53,65,72,1.00);
+}
+.btn-cooperate i{
+    margin-right: 10;
+}
+.footer-right{
+    display: flex;
+}
+.footer h4{
+    color: #fff;
+    font-weight: bold;
+    font-size: 15;
+    padding: 20 0;
+}
+.footer-right ul{
+    padding: 0;
+    list-style-type: none;
+}
+.footer-right .child{
+    width: 33.33%;
+}
+.footer-right ul li a{
+    color: gray;
+}
+.footer-right ul li{
+    margin-bottom: 12px;
+}
+.footer-right ul li a:hover{
+    color: #fff;
+   
+}
+.padding-right{
+    padding-right: 0;
+    filter: grayscale(1);
+    object-fit: fill;
+    object-position: 50% 50%;
+}
+.li-folow:hover .padding-right{
+    filter: grayscale(0);
+}
+.down-footer{
+    color: gray;
+    text-align: center;
+    border-top: solid;
+    border-top-width: 1px;
+    /* padding-top: 25px; */
+    padding: 25 0;
+    font-size: 13px;
+}
