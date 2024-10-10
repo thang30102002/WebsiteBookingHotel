@@ -38,7 +38,7 @@
                 
                 $this->render('admin/index', $data);
             } else {
-                header("Location: login");
+                header("Location: admin/login");
                 exit();
             }
 
@@ -108,7 +108,7 @@
                 $this->render('admin/manageClient', $data);
             }
             else {
-                header("Location: login");
+                header("Location: admin/login");
                 $data['user'] = $this->Users->getAllUser();
                 exit();
             }
@@ -131,7 +131,7 @@
                 $this->render('admin/editClient', $data);
             }
             else {
-                header("Location: login");
+                header("Location: admin/login");
                 exit();
             }
         }
@@ -149,28 +149,36 @@
                 $this->render('admin/manageAdminHotel', $data);
             }
             else {
-                header("Location: login");
+                header("Location: admin/login");
                 exit();
             }
         }
         public function editAdminHotel() {
             if (isset($_SESSION['loginAdminSystem']) && $_SESSION['loginAdminSystem'] === true) {
-                if (isset($_POST['edit-admin-hotel'])) {
-                    $this->adminHotel = new AdminHotel;
-                    
-                    $editAdminHotel=$this->adminHotel->UpdateAdminHotel($_GET["adminHotel_id"], $_POST["email"], $_POST["number_phone"], $_POST["password"], $_POST["surname"],$_POST["name"]);
-                    $this->success("Chỉnh sửa thành công.");
-                }
+                
                 
                 
                 $this->adminHotel = new AdminHotel;
                 $this->Hotels = new HotelsModel;
-                $data['hotel'] = $this->Hotels->getAllHotels();
+                $data['hotel'] = $this->Hotels->getHotelForAdminHotel($_GET['adminHotel_id']);
                 $data['adminHotel'] = $this->adminHotel->getAdminHotelDetail($_GET['adminHotel_id']);
                 $this->render('admin/editAdminHotel', $data);
+                if (isset($_POST['edit-admin-hotel'])) {
+                    $this->adminHotel = new AdminHotel;
+                    $this->hotel = new HotelsModel;
+                    $editAdminHotel=$this->adminHotel->UpdateAdminHotel($_GET["adminHotel_id"], $_POST["email"], $_POST["number_phone"], $_POST["password"], $_POST["surname"],$_POST["name"]);
+                    $editHotel=$this->hotel->UpdateStatusHotel($_POST['status'],$data['hotel'][0]['hotel_id']);
+                    
+                    echo "<script type='text/javascript'>
+                            alert('Chỉnh sửa thành công.');
+                            window.location.href = window.location.href;
+                        </script>";
+                    exit(); // Kết thúc xử lý sau khi xuất JavaScript
+                }
+                
             }
             else {
-                header("Location: login");
+                header("Location: admin/login");
                 exit();
             }
         }
@@ -189,7 +197,7 @@
                 $this->render('admin/bookings', $data);
             }
             else {
-                header("Location: login");
+                header("Location: admin/login");
                 exit();
             }
         }
@@ -209,21 +217,48 @@
                 $this->render('admin/editBooking', $data);
             }
             else {
-                header("Location: login");
+                header("Location: admin/login");
                 exit();
             }
         }
-        public function hotels(){
+        
+        public function addUser(){
             if (isset($_SESSION['loginAdminSystem']) && $_SESSION['loginAdminSystem'] === true) {
+                
+                
+                if (isset($_POST['add_user'])) {
+                    $this->User = new UserModel;
+                    $addUser = $this->User->AddUser($_POST["email"], $_POST["password"], $_POST["user_name"], $_POST["number_phone"]);
+                    header("Location: manageClient");
+                    exit();
+                }
                 $this->Hotels = new HotelsModel;
                 $data['hotel'] = $this->Hotels->getAllHotels();
-                $this->render('admin/hotels', $data);
+                $this->render('admin/addUser', $data);
+                
+            } else {
+                header("Location: admin/login");
+                exit();
+            }
+        }
+        public function revenue() {
+            if (isset($_SESSION['loginAdminSystem']) && $_SESSION['loginAdminSystem'] === true) {
+               
+                
+                $this->Hotel = new HotelsModel;
+                $data['hotel'] = $this->Hotel->getHotelForAdminHotel($_GET['adminHotel_id']);
+         
+                $this->Room=new RoomModel;
+                $data['room'] = $this->Room->getAllRoomsHotel($data['hotel'][0]['hotel_id']);
+                $this->render('admin/revenue', $data);
             }
             else {
                 header("Location: login");
                 exit();
             }
         }
+        
+        
         
 
     }

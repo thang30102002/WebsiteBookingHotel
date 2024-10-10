@@ -61,8 +61,21 @@
                                             <?php
                                                 $dem=0;
                                                 
+
                                                 for($i=0;$i<count($data['bookings']);$i++)
                                                 {
+													$status="";
+													if($data['bookings'][$i]['status']==1)
+													{
+														$status="Đặt phòng thành công";
+													}
+													elseif($data['bookings'][$i]['status']==2)
+													{
+														$status="Đặt phòng không thành công";
+													}
+													else{
+														$status="Đang kiểm tra";
+													}
                                                     $this->Room = new RoomModel;
                                                     $room = $this->Room->getRoomDetail($data['bookings'][$i]['room_id']);
                                                     $dem=$dem+1;
@@ -79,7 +92,7 @@
                                                         <td>".number_format($data['bookings'][$i]['total_price'], 0, ',', '.') . ' vnđ'."</td>
                                                         
                                                         <td>
-                                                            <div class='actions'> <a href='#' class='btn btn-sm bg-success-light mr-2'>Active</a> </div>
+                                                            ".$status."
                                                         </td>
                                                         
                                                     </tr>

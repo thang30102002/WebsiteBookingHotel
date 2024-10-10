@@ -17,7 +17,7 @@
                                 <img src="https://ik.imagekit.io/tvlk/image/imageResource/2019/09/23/1569229181629-eeb038ad844874f951326d0a8534bf48.png?tr=q-75,w-100" alt="">
                             </div>
                             <div class="btn-cooperate">
-                                <form action="AdminHotelController/login">
+                                <form action="http://localhost/WebsiteBookingHotel/AdminHotelController/login">
                                     <button style='submit'><i class="far fa-handshake"></i>Hợp tác với Hotel Hive</button>
                                 </form>
                                 

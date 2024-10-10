@@ -33,7 +33,7 @@
 <body>
 	
 	<div class="main-wrapper">
-		<?php $this->render('element/header-admin-hotel',$data);?>
+	<?php $this->render('admin/header',$data);?>
 		<?php $this->render('admin/sidebar');?>
 		<div class="page-wrapper">
 			<div class="content container-fluid">
@@ -111,76 +111,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-md-12 col-lg-6">
-						<div class="card card-chart">
-							<div class="card-header">
-								<h4 class="card-title">Biểu đồ doanh thu các loại phòng</h4> </div>
-								<?php $rooms_name=[];
-									  $Revenue=[];
-									  for($i=0;$i<count($data['room']);$i++){
-										$rooms_name[]=$data['room'][$i]['room_name'];
-										$this->bookingModel= new BookingModel;
-										$revenue_room=$this->bookingModel->getRevenueRoom($data['room'][$i]['room_name']);
-										$Revenue[]=$revenue_room;
-									  }
-									  
-									  
-									  
-									  
-								?>
-							<div class="card-body">
-								<canvas id="myChart" style='max-width: 600px;max-height: 400px;'></canvas>
-			
-							</div>
-						</div>
-					</div>
-					<div class="col-md-12 col-lg-6">
-						<div class="card card-chart">
-							<div class="card-header card-review">
-								<h4 class="card-title">Bình luận của khách hàng</h4>
-								<input type="text" id="searchInput" placeholder="Tìm kiếm..." onkeyup="searchTable()">
-							</div>
-								
-							<div class="card-body">
-								<div class="table-responsive">
-										<table id="dataTable" class="datatable table table-stripped table table-hover table-center mb-0">
-											<thead>
-												<tr>
-													<th>STT</th>
-													<th>Tên khách hàng</th>
-													<th>Số điện thoại</th>
-													<th>Email</th>
-													<th>Nội dung</th>
-													<th>Ngày bình luận</th>
-												</tr>
-											</thead>
-											<tbody>
-												
-												<?php
-													for($i=0;$i<count($data['review']);$i++){
-														$dem=$i+1;
-														echo "<tr>
-																<td>".$dem."</td>
-																
-																<td>".$data['review'][$i]['user_name']."</td>
-																<td>".$data['review'][$i]['number_phone']."</td>
-																<td>".$data['review'][$i]['email']."</td>
-																<td>".$data['review'][$i]['coment']."</td>
-																<td>".$data['review'][$i]['review_date']."</td>
-																
-															</tr>";
-													}
-												?>
-												
-												
-											</tbody>
-										</table>
-									</div>
-							</div>
-						</div>
-					</div>
-				</div>
+				
 				
 			</div>
 		</div>
@@ -196,54 +127,7 @@
 	<script src="../assets/js/script.js"></script>
 	
 	
-	<script>
-		// Chuyển đổi biến PHP sang JavaScript
-        const roomsName = <?php echo json_encode($rooms_name); ?>;
-        const ctx = document.getElementById('myChart').getContext('2d');
-		const data_room=<?php echo json_encode($Revenue);?>;
-        const myChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: roomsName,
-                datasets: [{
-                    label: 'Doanh thu',
-                    data: data_room, // Dữ liệu dưới dạng số tiền
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 206, 86, 0.2)',
-                        'rgba(75, 192, 192, 0.2)',
-                        'rgba(153, 102, 255, 0.2)',
-                        'rgba(255, 159, 64, 0.2)'
-                    ],
-                    borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)'
-                    ],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true,
-						min: 200000, // Giá trị tối thiểu của trục Y
-                        max: 2000000, // Giá trị tối đa của trục Y
-                        ticks: {
-                            callback: function(value, index, values) {
-                                // Định dạng số tiền với ký hiệu tiền tệ (VND, USD, v.v.)
-                                return ' VND ' + value.toLocaleString(); // Định dạng với dấu phân cách hàng nghìn
-                            }
-                        }
-                    }
-                }
-            }
-        });
-    </script>
+	
 	<script>
 		function searchTable() {
 		const input = document.getElementById('searchInput');

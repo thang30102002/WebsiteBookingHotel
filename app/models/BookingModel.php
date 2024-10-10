@@ -127,9 +127,9 @@ class BookingModel
 	public function getTotalPriceIdHotel($hotel_id) {
 		// Câu lệnh SQL với hàm SUM() để tính tổng giá trị
 		$sql = "SELECT SUM(b.total_price) as total_price
-				FROM booking b
-				JOIN rooms r ON b.room_id = r.room_id
-				WHERE r.hotel_id = ?";
+		FROM booking b
+		JOIN rooms r ON b.room_id = r.room_id
+		WHERE r.hotel_id = ? AND b.status=1";
 	
 		// Sử dụng truy vấn chuẩn bị trước
 		$stmt = $this->db->prepare($sql);
@@ -277,6 +277,61 @@ class BookingModel
         } else {
             // Xử lý lỗi khi prepare thất bại
         }
+	}
+	//trả về doanh thu theo tháng và năm của loại phòng
+	public function getRevenueRoomMonth($room_id,$month,$year){
+		// Truy vấn để lấy tổng doanh thu cho phòng được chỉ định
+		$sql = "SELECT SUM(total_price) AS total_revenue
+		FROM booking
+		WHERE MONTH(check_in_date) = ?
+		AND YEAR(check_in_date) = ?
+		AND status = 1
+		AND room_id=?;
+		";
+	
+		// Sử dụng truy vấn chuẩn bị trước
+		$stmt = $this->db->prepare($sql);
+		$stmt->bind_param('iii', $month,$year,$room_id);
+		$stmt->execute();
+	
+		// Lấy kết quả
+		$result = $stmt->get_result();
+		
+		// Khởi tạo biến doanh thu
+		$row = $result->fetch_assoc();
+	
+	
+	
+		
+	
+		return $row;
+	}
+	//trả về doanh thu theo năm của loại phòng
+	public function getRevenueRoomYear($room_id,$year){
+		// Truy vấn để lấy tổng doanh thu cho phòng được chỉ định
+		$sql = "SELECT SUM(total_price) AS total_revenue
+		FROM booking
+		WHERE YEAR(check_in_date) = ?
+		AND status = 1
+		AND room_id=?;
+		";
+	
+		// Sử dụng truy vấn chuẩn bị trước
+		$stmt = $this->db->prepare($sql);
+		$stmt->bind_param('ii', $year,$room_id);
+		$stmt->execute();
+	
+		// Lấy kết quả
+		$result = $stmt->get_result();
+		
+		// Khởi tạo biến doanh thu
+		$row = $result->fetch_assoc();
+	
+	
+	
+		
+	
+		return $row;
 	}
 	
 

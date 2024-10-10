@@ -39,7 +39,7 @@
     position: absolute;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    
     width: 80%;
     color: #fff;
 }
@@ -284,7 +284,6 @@ h2::after {
 .username{
 	margin: 0;
     margin-right: 20px;
-    line-height: 38;
 }
 .btn-login{
 	margin-right: 10;
@@ -358,5 +357,34 @@ h2::after {
 .form-group .list-search ul li:hover{
     color: #fff;
     background-color: rgb(1, 148, 243);
+}
+
+
+/* Mobile: width<740px */
+@media only screen and (max-width: 46.25em){}
+/* 	Tablet: width>=740px and width<1024px */
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em){
+    .content{
+        display:none!important;
+    }
+    .background-header .img{
+        width: 100%;
+        position: relative;
+        padding: 5px;
+        right: 0;
+    }
+    .search_hotel{
+        width: 80%;
+    }
+    .img-asia{
+        width: 100%;
+    }
+
+    .hotel-partner{
+        width: 100%;
+    }
+    .img img{
+        width: 100%;
+    }
 }
 

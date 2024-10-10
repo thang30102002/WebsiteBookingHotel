@@ -16,7 +16,7 @@
 
 <body>
 	<div class="main-wrapper">
-	<?php $this->render('element/header-admin-hotel',$data);?>
+	<?php $this->render('admin/header',$data);?>
 		<?php $this->render('admin/sidebar');?>
 		<div class="page-wrapper">
 			<div class="content container-fluid">
@@ -68,7 +68,16 @@
                                                 <input name="password"   class="form-control" type="text" value="<?php echo $data["adminHotel"][0]["password"]; ?>">
                                             </div>
                                         </div>
-                                        
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Trạng thái</label><br>
+                                                <select name="status" id="status">
+                                                    <option value="0" <?php echo ($data["hotel"][0]["status"] == 0) ? 'selected' : ''; ?>>Chưa xét duyệt</option>
+                                                    <option value="1" <?php echo ($data["hotel"][0]["status"] == 1) ? 'selected' : ''; ?>>Đã xét duyệt</option>
+                                                    
+                                                </select>
+                                            </div>
+                                        </div>
                                         
                                         
                                     </div>

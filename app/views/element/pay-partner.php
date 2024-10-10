@@ -3,7 +3,8 @@
 </head>
 
 <body>
-    <div class="row hotel-partner">
+    <div class="row hotel-partner" style="width: 70%;
+    margin: auto;">
         <div class="col-4">
             <h3>Đối tác thanh toán</h3>
             

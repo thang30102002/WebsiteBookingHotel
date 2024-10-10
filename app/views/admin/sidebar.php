@@ -7,14 +7,13 @@
 						<li class="submenu"> <a href="#"><i class="fas fa-suitcase"></i> <span> Tài khoản khách hàng </span> <span class="menu-arrow"></span></a>
 							<ul class="submenu_class" style="display: none;">
 								<li><a href="manageClient"> Tất cả </a></li>
-                                
-                                
-								
+                                <li><a href="addUser"> Thêm mới </a></li>
 							</ul>
 						</li>
 						<li class="submenu"> <a href="#"><i class="fas fa-user"></i> <span> Admin khách sạn </span> <span class="menu-arrow"></span></a>
 							<ul class="submenu_class" style="display: none;">
 								<li><a href="managerAdminHotel"> Tất cả </a></li>
+								
                                 
 								
 							</ul>
@@ -25,12 +24,7 @@
 								
 							</ul>
 						</li>
-						<li class="submenu"> <a href="#"><i class="fas fa-user"></i> <span> Khách sạn </span> <span class="menu-arrow"></span></a>
-							<ul class="submenu_class" style="display: none;">
-								<li><a href="hotels">Tất cả </a></li>
-								
-							</ul>
-						</li>
+						
 						
 					</ul>
 				</div>

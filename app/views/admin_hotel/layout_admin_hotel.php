@@ -121,7 +121,7 @@
 					<div class="col-md-12 col-lg-6">
 						<div class="card card-chart">
 							<div class="card-header">
-								<h4 class="card-title">Biểu đồ doanh thu các loại phòng</h4> </div>
+								<h4 class="card-title">Biểu đồ đặt phòng các loại phòng</h4> </div>
 								<?php $rooms_name=[];
 									  $Revenue=[];
 									  for($i=0;$i<count($data['room']);$i++){
@@ -237,8 +237,8 @@
                 scales: {
                     y: {
                         beginAtZero: true,
-						min: 200000, // Giá trị tối thiểu của trục Y
-                        max: 2000000, // Giá trị tối đa của trục Y
+						min: 500000, // Giá trị tối thiểu của trục Y
+                        max: 20000000, // Giá trị tối đa của trục Y
                         ticks: {
                             callback: function(value, index, values) {
                                 // Định dạng số tiền với ký hiệu tiền tệ (VND, USD, v.v.)

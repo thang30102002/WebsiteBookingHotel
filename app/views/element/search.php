@@ -30,7 +30,7 @@
         
       ?>
       
-      <form action="Search" method="get" >
+      <form action="Home/search" method="get" >
         <div class="form-group">
           <label for="exampleInputEmail1">Thành phố, địa điểm hoặc tên khách sạn:</label>
           <div class='form-input'>

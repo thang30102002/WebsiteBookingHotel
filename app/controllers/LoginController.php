@@ -52,8 +52,8 @@ class LoginController extends Controller{
                     $urlArr = array_filter(explode('/',$url));
                     $urlArr = array_values($urlArr);
                     
-                    if (!empty(ucfirst($urlArr[1]))) {
-                        $a = ucfirst($urlArr[1]);
+                    if (!empty(ucfirst($urlArr[2]))) {
+                        $a = ucfirst($urlArr[2]);
                         header("Location: $a");
                         exit; // Đảm bảo dừng việc thực thi script sau khi chuyển hướng
                     } else {

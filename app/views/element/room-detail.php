@@ -106,14 +106,14 @@
                 
                     $img=$this->getImgFolder("hotel/".$data['hotel'][0]['hotel_id']."/".$_POST['room_name']."");
                     if(count($img)>0){
-                        echo "<img id='main-image' src='hotel/".$data['hotel'][0]['hotel_id']."/".$_POST['room_name']."/".$img[0]."' alt='Deluxe Twin Room'>
+                        echo "<img id='main-image' src='../hotel/".$data['hotel'][0]['hotel_id']."/".$_POST['room_name']."/".$img[0]."' alt='Deluxe Twin Room'>
                         <div class='thumbnail-detail-room'>";
                         $dem=0;
                         for($i=0;$i<count($img);$i++)
                         {
                             $dem=$dem+1;
                             
-                            echo "<img src='hotel/".$data['hotel'][0]['hotel_id']."/".$_POST['room_name']."/".$img[$i]."' alt='Thumbnail ".$dem."' onclick=\"changeImage('hotel/".$data['hotel'][0]['hotel_id']."/".$_POST['room_name']."/".$img[$i]."')\">";
+                            echo "<img src='../hotel/".$data['hotel'][0]['hotel_id']."/".$_POST['room_name']."/".$img[$i]."' alt='Thumbnail ".$dem."' onclick=\"changeImage('../hotel/".$data['hotel'][0]['hotel_id']."/".$_POST['room_name']."/".$img[$i]."')\">";
 
                         }
                     }
@@ -123,11 +123,7 @@
                     }
                     
                 ?>
-                <!-- <img src="https://ik.imagekit.io/tvlk/generic-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20023314-d6e5b92a4f5dff7b3dcf0140ccf4ebf7.jpeg?_src=imagekit&tr=c-at_max,f-jpg,h-460,pr-true,q-100,w-724" alt="Thumbnail 1" onclick="changeImage('https://ik.imagekit.io/tvlk/generic-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20023314-d6e5b92a4f5dff7b3dcf0140ccf4ebf7.jpeg?_src=imagekit&tr=c-at_max,f-jpg,h-460,pr-true,q-100,w-724')">
-                <img src="https://ik.imagekit.io/tvlk/generic-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20023314-6666fb1a00260ea3cfee62f4ceaf2909.jpeg?_src=imagekit&tr=c-at_max,f-jpg,h-460,pr-true,q-100,w-724" alt="Thumbnail 2" onclick="changeImage('https://ik.imagekit.io/tvlk/generic-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20023314-6666fb1a00260ea3cfee62f4ceaf2909.jpeg?_src=imagekit&tr=c-at_max,f-jpg,h-460,pr-true,q-100,w-724')">
-                <img src="https://ik.imagekit.io/tvlk/generic-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20023314-78d0231f7441b335bafce712f63ef867.jpeg?_src=imagekit&tr=c-at_max,f-jpg,h-460,pr-true,q-100,w-724" alt="Thumbnail 3" onclick="changeImage('https://ik.imagekit.io/tvlk/generic-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20023314-78d0231f7441b335bafce712f63ef867.jpeg?_src=imagekit&tr=c-at_max,f-jpg,h-460,pr-true,q-100,w-724')">
-                <img src="https://ik.imagekit.io/tvlk/generic-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20023314-c1642ac9bf7f02f8afa4b0f01b4fddd0.jpeg?_src=imagekit&tr=c-at_max,f-jpg,h-460,pr-true,q-100,w-724" alt="Thumbnail 4" onclick="changeImage('https://ik.imagekit.io/tvlk/generic-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20023314-c1642ac9bf7f02f8afa4b0f01b4fddd0.jpeg?_src=imagekit&tr=c-at_max,f-jpg,h-460,pr-true,q-100,w-724')">
-                <img src="https://ik.imagekit.io/tvlk/generic-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/67757118-3000x2963-FIT_AND_TRIM-be98c6e00ba51e7fd48078ae3b46b8c0.jpeg?_src=imagekit&tr=c-at_max,f-jpg,h-460,pr-true,q-100,w-724" alt="Thumbnail 5" onclick="changeImage('https://ik.imagekit.io/tvlk/generic-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/67757118-3000x2963-FIT_AND_TRIM-be98c6e00ba51e7fd48078ae3b46b8c0.jpeg?_src=imagekit&tr=c-at_max,f-jpg,h-460,pr-true,q-100,w-724')"> -->
+                
             </div>
         </div>
         <div class="details">

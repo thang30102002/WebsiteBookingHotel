@@ -16,7 +16,7 @@
 
 <body>
 	<div class="main-wrapper">
-	<?php $this->render('element/header-admin-hotel',$data);?>
+	<?php $this->render('admin/header',$data);?>
 		<?php $this->render('admin/sidebar');?>
 		<div class="page-wrapper">
 			<div class="content container-fluid">
@@ -46,11 +46,7 @@
 											<tr>
 												<th>STT</th>
 												<th>Tên khách sạn</th>
-                                                <th>Số điện thoại</th>
-                                                <th>Thành phố</th>
-                                                <th>Địa chỉ</th>
-												<th>Số sao</th>
-												<th>Giới thiệu</th>
+                                                
 												<th>Tài khoản admin </th>												
 											</tr>
 										</thead>
@@ -63,18 +59,16 @@
                                                 {
                                                     
                                                     $dem=$dem+1;
+                                                    $this->hotels= new AdminHotel;
+                                                    $hotel=$this->hotels->getAdminHotelDetail($data['hotel'][$i]['admin_hotel_id']);
 													
                                                     echo "
                                                     <tr>
                                                         <td>".$dem."</td>
                                         
                                                         <td>".$data['hotel'][$i]['hotel_name']."</td>
-                                                        <td>".$data['hotel'][$i]['hotel_number_phone']."</td>
-                                                        <td>".$data['hotel'][$i]['city']."</td>
-                                                        <td>".$data['hotel'][$i]['address']."</td>
-                                                        <td>".$data['hotel'][$i]['number_star']."</td>
-                                                        <td>".$data['hotel'][$i]['information']."</td>
-                                                        <td>".$data['hotel'][$i]['admin_hotel_id']."</td>
+                                                        
+                                                        <td>".$hotel[0]['email']."</td>
                                                         
                                                         <td class='text-right'>
                                                                 <div class='dropdown dropdown-action'> <a href='#' class='action-icon dropdown-toggle' data-toggle='dropdown' aria-expanded='false'><i class='fas fa-ellipsis-v ellipse_color'></i></a>

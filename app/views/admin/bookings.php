@@ -16,7 +16,7 @@
 
 <body>
 	<div class="main-wrapper">
-	<?php $this->render('element/header-admin-hotel',$data);?>
+	<?php $this->render('admin/header',$data);?>
 		<?php $this->render('admin/sidebar');?>
 		<div class="page-wrapper">
 			<div class="content container-fluid">
@@ -107,7 +107,7 @@
 													<div id='delete_asset_".$data['bookings'][$i]['booking_id']."' class='modal fade delete-modal' role='dialog'>
                                                         <div class='modal-dialog modal-dialog-centered'>
                                                             <div class='modal-content'>
-                                                                <div class='modal-body text-center'> <img src='../app/views/admin_dashbaord-_hotel_bootstrap5-main/assets/img/sent.png' alt='' width='50' height='46'>
+                                                                <div class='modal-body text-center'> <img src='../assets/img/sent.png' alt='' width='50' height='46'>
                                                                     <h3 class='delete_class'>Bạn có đồng ý xoá đơn đặt phòng này ?</h3>
                                                                     
                                                                         

@@ -23,7 +23,7 @@ class HotelsModel
 	public function getAllHotelsAddress($city)
     {
         // Truy vấn để lấy tất cả khách sạn trong thành phố được chỉ định
-        $sql = "SELECT * FROM hotel WHERE city = ?";
+        $sql = "SELECT * FROM hotel WHERE city = ? and status=1";
 
         // Sử dụng truy vấn chuẩn bị trước
         $stmt = $this->db->prepare($sql);
@@ -144,7 +144,7 @@ class HotelsModel
     public function getPriceMin($city)
     {
         // Truy vấn để lấy tất cả khách sạn trong thành phố được chỉ định
-        $sql = "SELECT price_min FROM hotel WHERE city = ?";
+        $sql = "SELECT price_min FROM hotel WHERE city = ? and status=1";
 
         // Sử dụng truy vấn chuẩn bị trước
         $stmt = $this->db->prepare($sql);
@@ -173,7 +173,7 @@ class HotelsModel
         public function getPriceMax($city)
         {
             // Truy vấn để lấy tất cả khách sạn trong thành phố được chỉ định
-            $sql = "SELECT price_min FROM hotel WHERE city = ?";
+            $sql = "SELECT price_min FROM hotel WHERE city = ? and status=1";
 
             // Sử dụng truy vấn chuẩn bị trước
             $stmt = $this->db->prepare($sql);
@@ -371,6 +371,35 @@ class HotelsModel
                 $stmt->close();
 
                 return $row;
+            }
+            //update status hotel
+            public function UpdateStatusHotel($status,$hotel_id) {
+                // Câu lệnh SQL UPDATE sử dụng dấu = trong điều kiện WHERE
+                $sql = "UPDATE hotel
+                        SET status=?
+                        WHERE hotel_id = ?";
+                
+                // Chuẩn bị câu lệnh SQL
+                $stmt = $this->db->prepare($sql);
+                
+                // Kiểm tra xem prepare có thành công không
+                if ($stmt) {
+                    // Bắt đầu gán giá trị cho các tham số
+                    $stmt->bind_param("ii", $status,$hotel_id);
+                    
+                    // Thực thi câu lệnh
+                    $stmt->execute();
+                    
+                    // Kiểm tra xem có bị lỗi không
+                    if ($stmt->errno) {
+                        // Xử lý lỗi ở đây (nếu cần)
+                    }
+                    
+                    // Đóng kết nối
+                    $stmt->close();
+                } else {
+                    // Xử lý lỗi khi prepare thất bại
+                }
             }
 
 

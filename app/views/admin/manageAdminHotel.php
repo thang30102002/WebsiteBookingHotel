@@ -16,7 +16,7 @@
 
 <body>
 	<div class="main-wrapper">
-	<?php $this->render('element/header-admin-hotel',$data);?>
+	<?php $this->render('admin/header',$data);?>
 		<?php $this->render('admin/sidebar');?>
 		<div class="page-wrapper">
 			<div class="content container-fluid">
@@ -51,6 +51,7 @@
                                                 <th>Tên</th>
                                                 <th>Password</th>
                                                 <th>Khách sạn</th>
+                                                <th>Trạng thái</th>
 												
 												
 											</tr>
@@ -66,6 +67,13 @@
 													$hotel_name[] = $this->Hotels->getHotelForAdminHotel($data['adminHotel'][$i]['admin_hotel_id']);
 													
                                                     $dem=$dem+1;
+                                                    if($hotel_name[$i][0]["status"]==1)
+                                                    {
+                                                        $status="Đã xét duyệt";
+                                                    }
+                                                    else{
+                                                        $status="Chưa xét duyệt";
+                                                    }
 													
                                                     echo "
                                                     <tr>
@@ -77,10 +85,11 @@
                                                         <td>".$data['adminHotel'][$i]['name']."</td>
 														<td>".$data['adminHotel'][$i]['password']."</td>
 														<td>".$hotel_name[$i][0]["hotel_name"]."</td>
+                                                        <td>".$status."</td>
 														
                                                         <td class='text-right'>
                                                                 <div class='dropdown dropdown-action'> <a href='#' class='action-icon dropdown-toggle' data-toggle='dropdown' aria-expanded='false'><i class='fas fa-ellipsis-v ellipse_color'></i></a>
-                                                                    <div class='dropdown-menu dropdown-menu-right'> <a class='dropdown-item' href='editAdminHotel?adminHotel_id=".$data['adminHotel'][$i]['admin_hotel_id']."'><i class='fas fa-pencil-alt m-r-5'></i> Edit</a> <a class='dropdown-item' href='#' data-toggle='modal' data-target='#delete_asset_".$data['adminHotel'][$i]['admin_hotel_id']."'><i class='fas fa-trash-alt m-r-5'></i> Delete</a> </div>
+                                                                    <div class='dropdown-menu dropdown-menu-right'> <a class='dropdown-item' href='editAdminHotel?adminHotel_id=".$data['adminHotel'][$i]['admin_hotel_id']."'><i class='fas fa-pencil-alt m-r-5'></i> Edit</a> <a class='dropdown-item' href='#' data-toggle='modal' data-target='#delete_asset_".$data['adminHotel'][$i]['admin_hotel_id']."'><i class='fas fa-trash-alt m-r-5'></i> Delete</a><a class='dropdown-item' href='revenue?adminHotel_id=".$data['adminHotel'][$i]['admin_hotel_id']."&&year=2024'><i class='fas fa-money-check-alt'></i> Doanh thu</a> </div>
                                                                 </div>
                                                         </td>
                                                         
@@ -88,7 +97,7 @@
 													<div id='delete_asset_".$data['adminHotel'][$i]['admin_hotel_id']."' class='modal fade delete-modal' role='dialog'>
                                                         <div class='modal-dialog modal-dialog-centered'>
                                                             <div class='modal-content'>
-                                                                <div class='modal-body text-center'> <img src='../app/views/admin_dashbaord-_hotel_bootstrap5-main/assets/img/sent.png' alt='' width='50' height='46'>
+                                                                <div class='modal-body text-center'> <img src='../assets/img/sent.png' alt='' width='50' height='46'>
                                                                     <h3 class='delete_class'>Bạn có đồng ý xoá thông tin khách hàng này ?</h3>
                                                                     
                                                                         

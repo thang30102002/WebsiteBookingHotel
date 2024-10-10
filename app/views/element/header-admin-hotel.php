@@ -7,7 +7,7 @@
 			<a class="mobile_btn" id="mobile_btn"> <i class="fas fa-bars"></i> </a>
 			<ul class="nav user-menu">
 				<li class="nav-item dropdown noti-dropdown">
-					<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown"> <i class="fe fe-bell"></i> <span class="badge badge-pill">3</span> </a>
+					
 					<div class="dropdown-menu notifications">
 						<div class="topnav-dropdown-header"> <span class="notification-title">Notifications</span> <a href="javascript:void(0)" class="clear-noti"> Clear All </a> </div>
 						<div class="noti-content">
@@ -81,10 +81,5 @@
 						</div> <a class="dropdown-item" href="myProfile">My Profile</a>  <a class="dropdown-item" href="login">Logout</a> </div>
 				</li>
 			</ul>
-			<div class="top-nav-search">
-				<form>
-					<input type="text" class="form-control" placeholder="Search here">
-					<button class="btn" type="submit"><i class="fas fa-search"></i></button>
-				</form>
-			</div>
+			
 		</div>

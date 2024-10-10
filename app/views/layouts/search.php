@@ -2,10 +2,15 @@
     $this->render('blocks/header');
 ?>
 <head>
-    <link rel="stylesheet" href="public/assets/clients/css/search.css">
-    <link href="public/assets/clients/icon/fontawesome/css/fontawesome.css" rel="stylesheet" />
-    <link href="public/assets/clients/icon/fontawesome/css/brands.css" rel="stylesheet" />
-    <link href="public/assets/clients/icon/fontawesome/css/solid.css" rel="stylesheet" />
+<link rel="stylesheet" href="../public/assets/clients/css/information-user.css">
+    <link rel="stylesheet" href="../public/assets/clients/css/search.css">
+    <link rel="stylesheet" href="../public/assets/clients/css/login.css">
+    <link rel="stylesheet" href="../public/assets/clients/css/register.css">
+    <link rel="stylesheet" href="../public/assets/clients/css/style.css">
+    <link rel="stylesheet" href="../public/assets/clients/css/footer.css">
+    <link href="../public/assets/clients/icon/fontawesome/css/fontawesome.css" rel="stylesheet" />
+    <link href="../public/assets/clients/icon/fontawesome/css/brands.css" rel="stylesheet" />
+    <link href="../public/assets/clients/icon/fontawesome/css/solid.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/resources/demos/style.css">
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
@@ -70,37 +75,7 @@
                     
                 </div>
             </form>
-            <!-- <div class="filter-star filter-price">
-                <p class="filter-title">Hạng sao</p>
-                <form>
-                    <input type="checkbox" id="star-1" name="star-1" value="star-1">
-                    <label for="star-1"> <img src="https://d1785e74lyxkqq.cloudfront.net/_next/static/v2/e/e4cb5ddfa3d1399bc496ee6b6539a5a7.svg" alt=""></label><br>
-                    <input type="checkbox" id="star-2" name="star-2" value="star-2">
-                    <label for="star-2"> <img src="https://d1785e74lyxkqq.cloudfront.net/_next/static/v2/e/e4cb5ddfa3d1399bc496ee6b6539a5a7.svg" alt=""><img src="https://d1785e74lyxkqq.cloudfront.net/_next/static/v2/e/e4cb5ddfa3d1399bc496ee6b6539a5a7.svg" alt=""></label><br>
-                    <input type="checkbox" id="star-3" name="star-3" value="star-3">
-                    <label for="star-3"> <img src="https://d1785e74lyxkqq.cloudfront.net/_next/static/v2/e/e4cb5ddfa3d1399bc496ee6b6539a5a7.svg" alt=""><img src="https://d1785e74lyxkqq.cloudfront.net/_next/static/v2/e/e4cb5ddfa3d1399bc496ee6b6539a5a7.svg" alt=""><img src="https://d1785e74lyxkqq.cloudfront.net/_next/static/v2/e/e4cb5ddfa3d1399bc496ee6b6539a5a7.svg" alt=""></label><br/>
-                    <input type="checkbox" id="star-4" name="star-4" value="star-4">
-                    <label for="star-4"> <img src="https://d1785e74lyxkqq.cloudfront.net/_next/static/v2/e/e4cb5ddfa3d1399bc496ee6b6539a5a7.svg" alt=""><img src="https://d1785e74lyxkqq.cloudfront.net/_next/static/v2/e/e4cb5ddfa3d1399bc496ee6b6539a5a7.svg" alt=""><img src="https://d1785e74lyxkqq.cloudfront.net/_next/static/v2/e/e4cb5ddfa3d1399bc496ee6b6539a5a7.svg" alt=""><img src="https://d1785e74lyxkqq.cloudfront.net/_next/static/v2/e/e4cb5ddfa3d1399bc496ee6b6539a5a7.svg" alt=""></label><br>
-                    <input type="checkbox" id="star-5" name="star-5" value="star-5">
-                    <label for="star-5"> <img src="https://d1785e74lyxkqq.cloudfront.net/_next/static/v2/e/e4cb5ddfa3d1399bc496ee6b6539a5a7.svg" alt=""><img src="https://d1785e74lyxkqq.cloudfront.net/_next/static/v2/e/e4cb5ddfa3d1399bc496ee6b6539a5a7.svg" alt=""><img src="https://d1785e74lyxkqq.cloudfront.net/_next/static/v2/e/e4cb5ddfa3d1399bc496ee6b6539a5a7.svg" alt=""><img src="https://d1785e74lyxkqq.cloudfront.net/_next/static/v2/e/e4cb5ddfa3d1399bc496ee6b6539a5a7.svg" alt=""><img src="https://d1785e74lyxkqq.cloudfront.net/_next/static/v2/e/e4cb5ddfa3d1399bc496ee6b6539a5a7.svg" alt=""></label><br>
-                </form>
-            </div> -->
-            <!-- <div class="filter-utilities filter-price">
-                <p class="filter-title">Tiện ích</p>
-                <form>
-                    <input type="checkbox" id="wifi" name="wifi" value="wifi">
-                    <label for="wifi"> WiFi</label><br>
-                    <input type="checkbox" id="ho-boi" name="ho-boi" value="ho-boi">
-                    <label for="ho-boi"> Hồ bơi</label><br>
-                    <input type="checkbox" id="cho-dau-xe" name="cho-dau-xe" value="cho-dau-xe">
-                    <label for="cho-dau-xe"> Chỗ đậu xe</label><br>
-                    <input type="checkbox" id="nha-hang" name="nha-hang" value="nha-hang">
-                    <label for="nha-hang"> Nhà hàng</label><br>
-                    <input type="checkbox" id="phong-hop" name="phong-hop" value="phong-hop">
-                    <label for="phong-hop"> Phòng họp</label><br>
-                </form>
-                
-            </div> -->
+            
         </div>
         <div class="main-search">
             <div class="why-price-chip">
@@ -145,7 +120,7 @@
                                         <div class='default-price'><span>".$price_default."</span></div>
                                         <div class='discount-price'><span>".$price_min." VND</span></div>
                                         <p>Chưa bao gồm thuế và phí</p>
-                                        <form action='DetailHotel' method='get'>
+                                        <form action='detailHotel' method='get'>
                                             <input type='hidden' name='id' value='".$data['name_hotel'][$i]["hotel_id"]."'> 
                                             <input type='hidden' name='date_in' value='".$_GET['date_in']."'> 
                                             <input type='hidden' name='number-night' value='".$_GET['number-night']."'> 

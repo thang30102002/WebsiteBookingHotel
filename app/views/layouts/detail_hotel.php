@@ -3,11 +3,17 @@
     $this->render('element/form-notification',$data);
 ?>
 <head>
-    <link rel="stylesheet" href="public/assets/clients/css/detail_hotel.css">
-    <link href="public/assets/clients/icon/fontawesome/css/fontawesome.css" rel="stylesheet" />
-    <link href="public/assets/clients/icon/fontawesome/css/brands.css" rel="stylesheet" />
+<link rel="stylesheet" href="../public/assets/clients/css/information-user.css">
+    <link rel="stylesheet" href="../public/assets/clients/css/detail_hotel.css">
+    <link href="../public/assets/clients/icon/fontawesome/css/fontawesome.css" rel="stylesheet" />
+    <link href="../public/assets/clients/icon/fontawesome/css/brands.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link href="public/assets/clients/icon/fontawesome/css/solid.css" rel="stylesheet" />
+    <link href="../public/assets/clients/icon/fontawesome/css/solid.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../public/assets/clients/css/login.css">
+    <link rel="stylesheet" href="../public/assets/clients/css/register.css">
+    <link rel="stylesheet" href="../public/assets/clients/css/footer.css">
+    <link rel="stylesheet" href="../public/assets/clients/css/form-notification.css">
+    <link rel="stylesheet" href="../public/assets/clients/css/style.css">
 </head>
 <body>
    
@@ -73,7 +79,7 @@
                             
                             <h3>Tiện ích chính</h2>
                             <div class="container">
-                                <div class="row row-cols-2">
+                                <div class="row row-cols-2" style="height:auto;">
                                     <?php
                                         
                                         for($i=0;$i<count($data["utilities"]);$i++)

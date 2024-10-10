@@ -22,7 +22,7 @@ class AdminHotelController extends Controller {
     public function index() {
         
         if (isset($_SESSION['loginadmin']) && $_SESSION['loginadmin'] === true) {
-            print_r($_SESSION['admin_hotel_id']);
+            
             $this->DetailHotel = new HotelsModel;
             $this->Reviews = new ReviewModel;
             $this->Booking = new BookingModel;
@@ -30,7 +30,7 @@ class AdminHotelController extends Controller {
             
             $data['hotel'] = $this->DetailHotel->getHotelForAdminHotel($_SESSION['admin_hotel_id']);
             $data['review'] = $this->Reviews->getAllReview($data['hotel'][0]['hotel_id']);
-            $data['total_price'] = $this->Booking->getTotalPriceIdHotel($_SESSION['admin_hotel_id']);
+            $data['total_price'] = $this->Booking->getTotalPriceIdHotel($data['hotel'][0]['hotel_id']);
             $data['room'] = $this->Room->getRoomsForAdmin_hotel_id($_SESSION['admin_hotel_id']);
             
             if (isset($_POST['payment'])) {
@@ -422,6 +422,23 @@ class AdminHotelController extends Controller {
             exit();
         }
         $this->render('admin_hotel/form_add_hotel');
+    }
+    
+    public function revenue() {
+        if (isset($_SESSION['loginadmin']) && $_SESSION['loginadmin'] === true) {
+           
+            
+            $this->Hotel = new HotelsModel;
+            $data['hotel'] = $this->Hotel->getHotelForAdminHotel($_SESSION['admin_hotel_id']);
+     
+            $this->Room=new RoomModel;
+            $data['room'] = $this->Room->getAllRoomsHotel($data['hotel'][0]['hotel_id']);
+            $this->render('admin_hotel/revenue', $data);
+        }
+        else {
+            header("Location: login");
+            exit();
+        }
     }
 
     

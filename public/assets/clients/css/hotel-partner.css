@@ -23,3 +23,22 @@
 .col-8 img{
     padding: 10;
 }
+
+/* Mobile: width<740px */
+@media only screen and (max-width: 46.25em){}
+/* 	Tablet: width>=740px and width<1024px */
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em){
+    .hotel-partner{
+        width: 100%!important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .hotel-partner .col-4 span{
+        display: none;
+    }
+    .col-4{
+        width: 100%!important;
+        text-align: center;
+    }
+}

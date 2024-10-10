@@ -26,6 +26,7 @@
 						<li class="submenu"> <a href="#"><i class="fas fa-user"></i> <span> Khách sạn </span> <span class="menu-arrow"></span></a>
 							<ul class="submenu_class" style="display: none;">
 								<li><a href="hotelInformation">Thông tin </a></li>
+								<li><a href="revenue?year=2024">Doanh thu </a></li>
 								
 							</ul>
 						</li>
